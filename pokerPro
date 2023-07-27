@@ -1,0 +1,30 @@
+import random
+
+# Set up the deck of cards
+suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+deck = [(rank, suit) for suit in suits for rank in ranks]
+random.shuffle(deck)
+
+# Function to deal a hand of cards
+def deal_hand(num_cards):
+    hand = []
+    for _ in range(num_cards):
+        hand.append(deck.pop())
+    return hand
+
+# Function to evaluate the poker hand
+def evaluate_hand(hand):
+    # Implement your own logic for evaluating the poker hand here
+    # This can include checking for pairs, flushes, straights, etc.
+    # Return the hand evaluation result
+
+# Play the game
+num_players = 4
+num_cards_per_hand = 5
+
+print("Let's play poker!")
+for i in range(num_players):
+    hand = deal_hand(num_cards_per_hand)
+    print(f"Player {i+1} hand: {hand}")
+    # Evaluate the hand and determine the winner(s)
